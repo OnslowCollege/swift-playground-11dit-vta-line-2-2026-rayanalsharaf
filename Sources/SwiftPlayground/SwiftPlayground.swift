@@ -347,6 +347,33 @@ struct SwiftPlayground {
                isPlaying = false
             }
 
+        // Wordle - not prototype array
+        let answer = ["C", "H", "A", "I", "N"]
+        var guess: [String] = []
+
+        print("Guess the 5 letter word:")
+        var i = 0
+
+        while i < 5 {
+            let letter = readLine()!.uppercased()
+            guess.append(letter)
+            i = i + 1
+        }
+
+        i = 0
+        while i < 5 {
+
+    if guess[i] == answer[i] {
+        print("🟩", terminator: " ")
+    }
+    else if answer.contains(guess[i]) {
+        print("🟨", terminator: " ")
+    }
+    else {
+        print("⬜️", terminator: " ")
+    }
+       i = i + 1
+        }
         }
 
    }  // closes main function
