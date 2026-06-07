@@ -475,31 +475,86 @@ struct SwiftPlayground {
 Task - Only to accept people in if they are over the age of 18 */
 
 // this is a func and inside of the func it has a parameter that sets the value to have a interger from 0 to 100.
-        func input(prompt: String, from: Int, to: Int) -> Int { 
-           // this is while loop
-            while true { 
-                // prints the promt and sets the terminator parameter
-                print(prompt, terminator: " ")
-                // if userInput is a constant it sets it to readline.
-                if let userInput = readLine(), let int = Int(userInput),
-                    (from...to).contains(int)
-                {
-                    return int
-                } else {
-                    print(
-                        "You must enter a valid whole number (integer) from \(from) to \(to)."
-                    )
-                }
+        // func input(prompt: String, from: Int, to: Int) -> Int { 
+        //    // this is while loop
+        //     while true { 
+        //         // prints the promt and sets the terminator parameter
+        //         print(prompt, terminator: " ")
+        //         // if userInput is a constant it sets it to readline.
+        //         if let userInput = readLine(), let int = Int(userInput),
+        //             (from...to).contains(int)
+        //         {
+        //             return int
+        //         } else {
+        //             print(
+        //                 "You must enter a valid whole number (integer) from \(from) to \(to)."
+        //             )
+        //         }
+        //     }
+        // }
+
+        // let age: Int = input(prompt: "What is your age?", from: 0, to: 100)
+
+        // switch age {
+        // case 0: print("Hello, little baby!")
+        // case ...17: print("You are too young.")
+        // default: print("Welcome!")
+        // }
+
+        // Task Zealandia - practise assesment.
+        // Prints Welcome message
+        print("Welcome to Zealandia Tracker.")
+
+        var isTracking: Bool = true
+        let birdOrInsect: [String] = []
+
+        let bird = [" 0.Tieke", "1.Kaka", "2.Takahe", "3.Hihi", "4.Kiwi", "5.Pateke", "6.Tui", "7.Kereru"]
+        let insect = ["0.Giant Weta", "1.Tree weta", "2.Cave weta", "3.Putoko", "4.Pungawerewere", "5.Ngaokeoke", "6.Waemano", "7.Kapowai"]
+
+        /// While loop that asks a question.
+        while isTracking {
+            print("Did you see a bird or insect:")
+            let birdOrInsect: String = readLine()!.lowercased()
+        
+        // if bird it prints the list of birds. if insect it prints the list of insects.
+        if birdOrInsect == "bird" {
+            bird.enumerared().forEach { index, bird in 
+            print("\(index). \(bird)")
+            print("Which insect did you see?")
+            isTracking = false
             }
+
+        } else if birdOrInsect == "insect" {
+            // enumerated makes the list of insects a numbered list.
+            insect.enumerated().forEach { index, insect in 
+            print("\(index). \(insect)")
+            print(insect)
+            print("Which insect did you see?")
+            isTracking = false
+            }
+
+        } else {
+            print("Enter valid bird or insect")
         }
 
-        let age: Int = input(prompt: "What is your age?", from: 0, to: 100)
+        print("Enter a number: ")
+        let birdIndex = Int(readLine)()!)!
+        print("\(bird[birdIndex])")
 
-        switch age {
-        case 0: print("Hello, little baby!")
-        case ...17: print("You are too young.")
-        default: print("Welcome!")
+        } else if birdOrInsect == "insect" {
+            insect.enumerated().forEach { index, insect in
+            print("\(index). \(insect)")
         }
+        }else {
+
+        }
+
+        // while loop close
+        } 
+
+
+
+
 
     }  // closes main function
 }  // closes the swift playground fuction
