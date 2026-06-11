@@ -511,8 +511,21 @@ Task - Only to accept people in if they are over the age of 18 */
         let insectSeen: [String] = []
         let userInput = readLine()
 
-        let bird = [" 0.Tieke", "1.Kaka", "2.Takahe", "3.Hihi", "4.Kiwi", "5.Pateke", "6.Tui", "7.Kereru"]
-        let insect = ["0.Giant Weta", "1.Tree weta", "2.Cave weta", "3.Putoko", "4.Pungawerewere", "5.Ngaokeoke", "6.Waemano", "7.Kapowai"]
+        let bird = [" 1.Tieke", "2.Kaka", "3.Takahe", "4.Hihi", "5.Kiwi", "6.Pateke", "7.Tui", "8.Kereru"]
+        let insect = ["1.Giant Weta", "2.Tree weta", "3.Cave weta", "4.Putoko", "5.Pungawerewere", "6.Ngaokeoke", "7.Waemano", "8.Kapowai"]
+
+        func printbirdOrInsect(birdOrInsect: [String]) {
+            var duplicatebirdOrInsect: [String] = []
+            for item in birdOrInsect {
+                if duplicatebirdOrInsect.contains(birdOrInsect) {
+                    continue
+                }
+                var duplicateCount = 0
+                for otherbirdOrInsect in birdOrInsect {
+                    if birdOrInsect == otherbirdOrInsect {
+                        duplicateCount += 1
+                    }
+                }
 
         /// While loop that asks a question.
         while isTracking {
@@ -526,9 +539,10 @@ Task - Only to accept people in if they are over the age of 18 */
             print("Which bird did you see?")
             }
 
-            if let userInput = Int(readLine()!)!
+            if let userInput = Int(readLine()!)! {
             let index = userInput
-            if index >= -1 && index < 7 {
+            
+            if index >= 0 && index < 7 {
                 birdSeen.append(bird[index])
                 print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
                 continue
@@ -539,14 +553,14 @@ Task - Only to accept people in if they are over the age of 18 */
         } else if birdOrInsect == "insect" {
             // enumerated makes the list of insects a numbered list.
             insect.enumerated().forEach { index, insect in 
-            print("\(index). \(insect)")
+            print("\(index - 1). \(insect)")
             print("Which insect did you see?")
             
             }
 
-            if let userInput = Int(readLine()!)!
+            if let userInput = Int(readLine()!)! {
             let index = userInput
-            if index >= -1 && index < 7 {
+            if index >= 0 && index < 7 {
                 insectSeen.append(bird[index])
                 print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
                 continue
@@ -600,7 +614,7 @@ Task - Only to accept people in if they are over the age of 18 */
 
         while isAdding {
             print("Did you see a bird or a insect:")
-            let addingBirdOrInsect = readline()!.lowercased()
+            let addingBirdOrInsect = readLine()!.lowercased()
 
             if addingBirdOrInsect == "bird" {
                 print("which bird did you see?")
