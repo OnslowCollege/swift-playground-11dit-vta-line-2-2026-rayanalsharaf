@@ -501,130 +501,156 @@ Task - Only to accept people in if they are over the age of 18 */
         // default: print("Welcome!")
         // }
 
-        // Task Zealandia - practise assesment.
-        // Prints Welcome message
-        print("Welcome to Zealandia Tracker.")
+        // // Task Zealandia - practise assesment. (Unfinished may be wrong.)
+        // // Prints Welcome message
+        // print("Welcome to Zealandia Tracker.")
 
-        var isTracking = true
-        let birdOrInsect: [String] = []
-        let birdSeen: [String] = []
-        let insectSeen: [String] = []
-        let userInput = readLine()
+        // var isTracking = true
+        // let birdOrInsect: [String] = []
+        // let birdSeen: [String] = []
+        // let insectSeen: [String] = []
+        // let userInput = readLine()
 
-        let bird = [" 1.Tieke", "2.Kaka", "3.Takahe", "4.Hihi", "5.Kiwi", "6.Pateke", "7.Tui", "8.Kereru"]
-        let insect = ["1.Giant Weta", "2.Tree weta", "3.Cave weta", "4.Putoko", "5.Pungawerewere", "6.Ngaokeoke", "7.Waemano", "8.Kapowai"]
+        // let bird = [" 1.Tieke", "2.Kaka", "3.Takahe", "4.Hihi", "5.Kiwi", "6.Pateke", "7.Tui", "8.Kereru"]
+        // let insect = ["1.Giant Weta", "2.Tree weta", "3.Cave weta", "4.Putoko", "5.Pungawerewere", "6.Ngaokeoke", "7.Waemano", "8.Kapowai"]
 
-        func printbirdOrInsect(birdOrInsect: [String]) {
-            var duplicatebirdOrInsect: [String] = []
-            for item in birdOrInsect {
-                if duplicatebirdOrInsect.contains(birdOrInsect) {
-                    continue
-                }
-                var duplicateCount = 0
-                for otherbirdOrInsect in birdOrInsect {
-                    if birdOrInsect == otherbirdOrInsect {
-                        duplicateCount += 1
-                    }
-                }
+        // func printbirdOrInsect(birdOrInsect: [String]) {
+        //     var duplicatebirdOrInsect: [String] = []
+        //     for item in birdOrInsect {
+        //         if duplicatebirdOrInsect.contains(birdOrInsect) {
+        //             continue
+        //         }
+        //         var duplicateCount = 0
+        //         for otherbirdOrInsect in birdOrInsect {
+        //             if birdOrInsect == otherbirdOrInsect {
+        //                 duplicateCount += 1
+        //             }
+        //         }
 
-        /// While loop that asks a question.
-        while isTracking {
-            print("Did you see a bird or insect:")
-            let birdOrInsect: String = readLine()!.lowercased()
+        // /// While loop that asks a question.
+        // while isTracking {
+        //     print("Did you see a bird or insect:")
+        //     let birdOrInsect: String = readLine()!.lowercased()
         
-        // if bird it prints the list of birds. if insect it prints the list of insects.
-        if birdOrInsect == "bird" {
-            bird.enumerated().forEach { index, bird in 
-            print("\(index). \(bird)")
-            print("Which bird did you see?")
-            }
+        // // if bird it prints the list of birds. if insect it prints the list of insects.
+        // if birdOrInsect == "bird" {
+        //     bird.enumerated().forEach { index, bird in 
+        //     print("\(index). \(bird)")
+        //     print("Which bird did you see?")
+        //     }
 
-            if let userInput = Int(readLine()!)! {
-            let index = userInput
+        //     if let userInput = Int(readLine()!)! {
+        //     let index = userInput
             
-            if index >= 0 && index < 7 {
-                birdSeen.append(bird[index])
-                print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
-                continue
-            }
+        //     if index >= 0 && index < 7 {
+        //         birdSeen.append(bird[index])
+        //         print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
+        //         continue
+        //     }
             
             
 
-        } else if birdOrInsect == "insect" {
-            // enumerated makes the list of insects a numbered list.
-            insect.enumerated().forEach { index, insect in 
-            print("\(index - 1). \(insect)")
-            print("Which insect did you see?")
+        // } else if birdOrInsect == "insect" {
+        //     // enumerated makes the list of insects a numbered list.
+        //     insect.enumerated().forEach { index, insect in 
+        //     print("\(index - 1). \(insect)")
+        //     print("Which insect did you see?")
             
-            }
+        //     }
 
-            if let userInput = Int(readLine()!)! {
-            let index = userInput
-            if index >= 0 && index < 7 {
-                insectSeen.append(bird[index])
-                print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
-                continue
-            }
-
-
+        //     if let userInput = Int(readLine()!)! {
+        //     let index = userInput
+        //     if index >= 0 && index < 7 {
+        //         insectSeen.append(bird[index])
+        //         print("\(userInput) is invalid. Please type a valid integer from 0 to 7")
+        //         continue
+        //     }
 
 
 
-        } else {
-            print("Enter valid bird or insect")
-        }
 
-        print("Enter a number: ")
-        let birdIndex = Int(readLine)()!)!
-        print("added a \(bird[birdIndex])")
 
-        } else if birdOrInsect == "insect" {
-            let insectIndex = Int(readLine)()!)!
-            print("added a \(insect[insectIndex])")
-        }
+        // } else {
+        //     print("Enter valid bird or insect")
+        // }
 
-        }else {
-            isTracking = false
-        }
+        // print("Enter a number: ")
+        // let birdIndex = Int(readLine)()!)!
+        // print("added a \(bird[birdIndex])")
 
-        // while loop close
-        } 
+        // } else if birdOrInsect == "insect" {
+        //     let insectIndex = Int(readLine)()!)!
+        //     print("added a \(insect[insectIndex])")
+        // }
 
-        var isYesOrNO = true
-        let askingYesOrNo:  [String] = []
+        // }else {
+        //     isTracking = false
+        // }
 
-        while isYesOrNo {
-            print("Do you want to add another (Y/N):")
-            let askingYesOrNo = readLine()!.uppercased()
+        // // while loop close
+        // } 
+
+        // var isYesOrNO = true
+        // let askingYesOrNo:  [String] = []
+
+        // while isYesOrNo {
+        //     print("Do you want to add another (Y/N):")
+        //     let askingYesOrNo = readLine()!.uppercased()
 
         
-        if askingYesOrNo == "Y" {
-            continue
-        } else if askingYesOrNo == "N" {
-            print("Bye")
-            isYesOrNo = false
-        } else {
-            print("Please enter Y or N")
-        }
-        // while loop close
-        } 
+        // if askingYesOrNo == "Y" {
+        //     continue
+        // } else if askingYesOrNo == "N" {
+        //     print("Bye")
+        //     isYesOrNo = false
+        // } else {
+        //     print("Please enter Y or N")
+        // }
+        // // while loop close
+        // } 
 
-        var isAdding = true
-        let addingBirdOrInsect: [String] = []
+        // var isAdding = true
+        // let addingBirdOrInsect: [String] = []
 
-        while isAdding {
-            print("Did you see a bird or a insect:")
-            let addingBirdOrInsect = readLine()!.lowercased()
+        // while isAdding {
+        //     print("Did you see a bird or a insect:")
+        //     let addingBirdOrInsect = readLine()!.lowercased()
 
-            if addingBirdOrInsect == "bird" {
-                print("which bird did you see?")
+        //     if addingBirdOrInsect == "bird" {
+        //         print("which bird did you see?")
 
-            } else if addingBirdOrInsect == "insect" {
-                print("which insect did you see?")
-            }
+        //     } else if addingBirdOrInsect == "insect" {
+        //         print("which insect did you see?")
+        //     }
             
-          // while loop close  
+        //   // while loop close  
+        // }
+
+
+        // Practice assesment - Sleep tracker 
+        print("Welcome to Sleep Tracker.")
+
+        let goodSleepTime: Int = 8
+        let okSleepTime: Int = 6
+        let days: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        var day = 0
+        var totalSleepTime: Int = 0
+        var isRunning  = true
+
+        while isRunning {
+            let minSleepTime = 3
+            let maxSleepTime = 12
+            print("How many hours of sleep did you get on \(days[day])?")
+            let userInput = Int(readLine()!)!
+            if userInput > minSleepTime && userInput < maxSleepTime {
+            totalSleepTime += userInput
+            day += 
+            }
+            else {
+                print("Please type a valid integer from 3 to 12.")
+            }
         }
+        
 
 
 
