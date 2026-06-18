@@ -652,7 +652,7 @@ Task - Only to accept people in if they are over the age of 18 */
                 if avgSleepTime >= goodSleepTime {
                     print("You have a good sleep schedule.")
                 }
-                if avgSleepTime >= okSleepTime {
+                else if avgSleepTime >= okSleepTime {
                     print("You have an ok sleep schedule")
                 } else {
                     print("You have a bad sleep schedule")
@@ -668,7 +668,7 @@ Task - Only to accept people in if they are over the age of 18 */
             let maxSleepTime = 12
             // Asks how many hours of sleep the user got and on which day
             print("How many hours of sleep did you get on \(days[day])?")
-            let userInput: Int = Int(readLine()!)!
+            if let userInput = Int(readLine()!) {
             // If the user typed a valid integer between 3 - 12
             if userInput > minSleepTime && userInput < maxSleepTime {
             totalSleepTime += userInput
@@ -677,7 +677,13 @@ Task - Only to accept people in if they are over the age of 18 */
             // Does plus 1 every time it asks the question so it goes down the list
             day += 1
             }
+            // if you enter a integer outside the boundaries
             else {
+                print("Please type a valid integer from 3 to 12.")
+            }
+
+            // if you do not enter a integer
+            } else {
                 print("Please type a valid integer from 3 to 12.")
             }
         }
